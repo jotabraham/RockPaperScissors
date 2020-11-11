@@ -1,3 +1,4 @@
+
 const choices = document.querySelectorAll('.choice');
 const score = document.getElementById('score');
 const result = document.getElementById('result');
@@ -15,6 +16,7 @@ function play(e) {
     const computerChoice = getComputerChoice();
     const winner = getWinner(playerChoice, computerChoice);
     showWinner(winner, computerChoice);
+    console.log(playerChoice, computerChoice, winner);
 }
 
 //computer choice
@@ -86,7 +88,7 @@ function showWinner (winner, computerChoice) {
         <p>Player: ${scoreboard.player}</p>
         <p>Computer: ${scoreboard.computer}</p>
         `;
-
+    //
     modal.style.display = 'block';
 }
 
