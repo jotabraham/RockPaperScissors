@@ -7,7 +7,7 @@ const modal = document.getElementById('.modal');
 const scoreboard = {
     player: 0,
     computer: 0
-}
+};
 
 // play game
 function play(e) {
@@ -17,7 +17,7 @@ function play(e) {
     const winner = getWinner(playerChoice, computerChoice);
     showWinner(winner, computerChoice);
     console.log(playerChoice, computerChoice, winner);
-}
+};
 
 //computer choice
 function getComputerChoice() {
@@ -29,7 +29,7 @@ function getComputerChoice() {
     } else {
         return 'scissors';
     }
-}
+};
 
 //get game winner
 function getWinner(p, c) {
@@ -54,7 +54,7 @@ function getWinner(p, c) {
             return 'computer';
         }
     }
-}
+};
 
 //show winner
 function showWinner (winner, computerChoice) {
@@ -88,9 +88,9 @@ function showWinner (winner, computerChoice) {
         <p>Player: ${scoreboard.player}</p>
         <p>Computer: ${scoreboard.computer}</p>
         `;
-    //
+    //ERROR below
     modal.style.display = 'block';
-}
+};
 
 //event listeners
 choices.forEach(choice => choice.addEventListener('click', play));
